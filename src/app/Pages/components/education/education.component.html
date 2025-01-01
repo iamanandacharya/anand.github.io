@@ -15,12 +15,13 @@
     </div>
    
     <div class="row mt-4 pt-4">
-      <div class="col-lg-6 col-md-6" >
+      <!-- <div class="col-lg-6 col-md-6 offset-md-3" >
         
         <ul >
-          <li *ngFor="let experience of experiences;" >
+          <li *ngFor="let experience of experiences3;" >
             <div class="cv_edu_exp mt-3" >
               <div class="cv_edu_exp_box mt-4">
+                <p class="cv_desc mb-0">Current Experience</p>
                  <div class=" fw-bold text-custom position-relative">{{experience.title}}</div>
                 <p class="cv_desc mb-0">{{experience.company}}</p>
                 <p class="cv_desc mb-0">{{experience.period}}
@@ -44,9 +45,56 @@
 
       </ul>
       
+        </div> -->
+      <div class="col-lg-6 col-md-6" >
+        <h4><strong>Education</strong></h4>
+        <ul >
+          <li *ngFor="let experience of experiences;" >
+            <div class="cv_edu_exp mt-3" >
+              <div class="cv_edu_exp_box mt-4">
+                <div *ngIf="experience.title === 'Bachelor of Engineering'">
+                  Education-
+                </div>
+                <div class=" fw-bold text-custom position-relative">{{experience.title}}</div>
+                <p class="cv_desc mb-0">{{experience.company}}</p>
+                <p class="cv_desc mb-0">{{experience.period}}
+
+                  <button (click)="detailOnClick(experience)" type="button" class="btn btn-clear">
+                    <span *ngIf="!experience.detailIsDisplayed">+</span><span
+                      *ngIf="experience.detailIsDisplayed">-</span> More Details</button>
+
+                </p>
+              <p *ngIf="experience.detailIsDisplayed">
+                <span *ngFor="let mission of experience.missions;let index = index">
+
+                  <strong>{{mission}} </strong><br>
+                </span>
+                <strong>Technologies- {{experience.technologies}}</strong>
+              </p>
+                </div>
+                </div>
+              
+          </li>
+
+      </ul>
+      <h4><strong>Certification</strong></h4>
+      <ul >
+        <li *ngFor="let certification of certifications;" >
+          <div class="cv_edu_exp mt-3" >
+            <div class="cv_edu_exp_box mt-4">
+              <div class=" fw-bold text-custom position-relative">Certification- {{certification.title}}</div>
+              <p class="cv_desc mb-0">{{certification.company}}</p>
+              <p class="cv_desc mb-0" *ngIf="certification.period">{{certification.period}}</p>
+              <p class="cv_desc mb-0">Credly- <a href="{{certification.technologies}}">{{certification.technologies}}</a></p>
+              </div>
+              </div>
+            
+        </li>
+
+    </ul>
         </div>
         <div class="col-lg-6 col-md-6" >
-        
+          <h4><strong>Experiences</strong></h4>
           <ul >
             <li *ngFor="let experience of experiences2;" >
               <div class="cv_edu_exp mt-3" >
@@ -221,7 +269,7 @@
 <!-- END EXP. & EDU. -->
 
 <!-- START CTA -->
-<section class="section bg-cta">
+<!-- <section class="section bg-cta">
   <div class="bg-overlay"></div>
   <div class="container z-index">
     <div class="row">
@@ -235,5 +283,5 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- END CTA -->

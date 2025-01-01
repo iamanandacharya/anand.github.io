@@ -1,6 +1,6 @@
 
 .cv_edu_exp {
-    padding: 10px 0;
+    padding: 0px 0 !important;
     position: relative;
     &::after {
         content: "";
@@ -54,4 +54,19 @@
     line-height: 26px;
     font-size: 15px;
     color: #666;
+}
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: #105572;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
 }

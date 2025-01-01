@@ -602,8 +602,8 @@ button:focus {
 }
 
 .cv_edu_exp {
-  padding: 10px 0;
-  position: relative;
+    padding: 0px 0 !important;
+    position: relative;
 }
 .cv_edu_exp::after {
   content: "";

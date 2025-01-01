@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { projectsEn } from './projectsEn';
 
 @Component({
     selector: 'app-work',
@@ -8,55 +9,50 @@ import { Component } from '@angular/core';
     styleUrl: './work.component.css'
 })
 export class WorkComponent {
-  activeFilter = '*';
-  works = [
-    {
-      imageUrl: 'assets/images/works/1.jpg',
-      title: 'UI Elements, Icons',
-      description: 'Studio & Art',
-      categories: ['webdesign', 'wordpress']
-    },
-    {
-      imageUrl: 'assets/images/works/2.jpg',
-      title: 'Illustrations',
-      description: 'Creative & Art',
-      categories: ['seo', 'webdesign']
-    },
-    {
-      imageUrl: 'assets/images/works/3.jpg',
-      title: 'Media, Icons',
-      description: 'Open Imagination',
-      categories: ['work']
-    },
-    {
-      imageUrl: 'assets/images/works/4.jpg',
-      title: 'Graphics, UI Elements',
-      description: 'Locked Steel Gate',
-      categories: ['seo', 'webdesign']
-    },
-    {
-      imageUrl: 'assets/images/works/5.jpg',
-      title: 'Illustrations, Graphics',
-      description: 'Mac Sunglasses',
-      categories: ['seo', 'work']
-    },
-    {
-      imageUrl: 'assets/images/works/6.jpg',
-      title: 'UI Elements, Media',
-      description: 'Backpack Contents',
-      categories: ['wordpress']
-    }
-  ];
-
-  get filteredWorks() {
-    if (this.activeFilter === '*') {
-      return this.works;
-    } else {
-      return this.works.filter(work => work.categories.includes(this.activeFilter));
-    }
+  projects:any[]=projectsEn;
+  venobox: any;
+  constructor() {
+    this.projects=projectsEn;
   }
 
-  setActiveFilter(filter: string) {
-    this.activeFilter = filter;
+  ngOnInit(): void {
+    
+  }
+
+  ngAfterViewInit(){
+    console.log("after view init");
+    this.onMouse("portfolio-link", "portfolio-img");
+    this.onMouse("teamTraveler-link", "teamTraveler-img");
+    this.onMouse("mautic-link", "mautic-img");
+    this.onMouse("pokedex-link", "pokedex-img");
+    this.onMouse("riddle-link", "riddle-img");
+    // this.venobox = $('.venobox');
+    // this.venobox.venobox();
+  }
+
+  detailOnClick(project: any) {
+    this.projects.filter(item=>item.detailIsDisplayed && item.id!=project.id).map(elem=>elem.detailIsDisplayed=false);
+    project.detailIsDisplayed=!project.detailIsDisplayed;
+  }
+
+  onMouse(idLink: String, idImage: String) {
+    // $('#' + idLink).on("mouseenter", function () {
+    //   console.log('on mouseenter');
+    //   $('#' + idImage).css("opacity", "0.3");
+    //   $('#' + idLink).css("opacity", "1");
+    // }).on('mouseleave', function () {
+    //   $('#' + idImage).css("opacity", "1");
+    //   $('#' + idLink).css("opacity", "0");
+    // }
+    // );
+
+    // $('#' + idImage).on("mouseenter", function () {
+    //   $('#' + idImage).css("opacity", "0.3");
+    //   $('#' + idLink).css("opacity", "1");
+    // }).on('mouseleave', function () {
+    //   $('#' + idImage).css("opacity", "1");
+    //   $('#' + idLink).css("opacity", "0");
+    // }
+    // );
   }
 }

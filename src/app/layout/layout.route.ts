@@ -12,11 +12,11 @@ import { Index10Component } from "../Pages/index10/index10.component";
 import { Index11Component } from "../Pages/index11/index11.component";
 import { Index12Component } from "../Pages/index12/index12.component";
 import { Index13Component } from "../Pages/index13/index13.component";
-import { Index14Component } from "../Pages/index14/index14.component";
-import { Index15Component } from "../Pages/index15/index15.component";
-import { Index16Component } from "../Pages/index16/index16.component";
-import { Index17Component } from "../Pages/index17/index17.component";
-import { Index18Component } from "../Pages/index18/index18.component";
+// import { Index14Component } from "../Pages/index14/index14.component";
+// import { Index15Component } from "../Pages/index15/index15.component";
+// import { Index16Component } from "../Pages/index16/index16.component";
+// import { Index17Component } from "../Pages/index17/index17.component";
+// import { Index18Component } from "../Pages/index18/index18.component";
 
 export const INDEX_ROUTES: Routes = [
   { path: '', component: Index1Component },
@@ -32,9 +32,9 @@ export const INDEX_ROUTES: Routes = [
   { path: 'index-11', component: Index11Component },
   { path: 'index-12', component: Index12Component },
   { path: 'index-13', component: Index13Component },
-  { path: 'index-14', component: Index14Component },
-  { path: 'index-15', component: Index15Component },
-  { path: 'index-16', component: Index16Component },
-  { path: 'index-17', component: Index17Component },
-  { path: 'index-18', component: Index18Component },
+  // { path: 'index-14', component: Index14Component },
+  // { path: 'index-15', component: Index15Component },
+  // { path: 'index-16', component: Index16Component },
+  // { path: 'index-17', component: Index17Component },
+  // { path: 'index-18', component: Index18Component },
 ]
