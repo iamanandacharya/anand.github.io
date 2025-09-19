@@ -79,6 +79,19 @@ export const certification = [
 ];
 export const experiencesEn2 = [
     {
+       title: "Senior Mobile Full-Stack Developer",
+       company: 'Kemper',
+       period: "June 2025 - Current",
+       technologies: "Ionic Framework, angular, Single-SPA Angular, Primeng, Typescript, JIRA, JavaScript, NodeJS, SCSS, CSS, Cordova, Capacitor, Java Spring, GitHub, AWS Services, VS Code, XCODE, Android Studio, Postman, Chrom/Safari Dev Tools, SourceTree, MicroService, ExpressJS, MySql, Postman.",
+       missions: [
+           "• Lead a team in the creation of cross-platform mobile application from scratch using Ionic, Angular, Capacitor, Bitrise, Cordova, CICD, BrowserStack, Jenkins, AWS, GitLab, JFrogg, App-store, Play-store and Typescript.",
+           "• Managed the complete Software Development Life Cycle (SDLC) using Agile methodologies, enhancing project delivery efficiency.",
+            "• Led collaborative efforts with stakeholders to gather requirements, ensuring alignment with project objectives and successful documentation.",
+           "• Designed and implemented advanced web application features with Angular 20 and TypeScript, NgRx, ForgeRock, Splunk, improving application performance and user engagement.",
+        ],
+       detailIsDisplayed: false,
+   },
+    {
        title: "Senior Software Engineer",
        company: 'LTIMindtree Client- Toyota',
        period: "Aug 2023 - Current",

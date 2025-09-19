@@ -22,7 +22,6 @@ import { FooterComponent } from './footer/footer.component';
         ClientComponent,
         BlogComponent,
         ContactUsComponent,
-        FooterComponent,
     ],
     templateUrl: './layout.component.html',
     styleUrl: './layout.component.css'

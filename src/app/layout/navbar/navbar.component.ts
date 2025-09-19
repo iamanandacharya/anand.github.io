@@ -27,7 +27,7 @@ export class NavbarComponent implements AfterViewInit {
     { id: 'education', label: 'CV', href: '#education' },
     { id: 'work', label: 'Portfolio', href: '#work' },
     // { id: 'client', label: 'References', href: '#client' },
-    // { id: 'blog', label: 'Blog', href: '#blog' },
+    { id: 'blog', label: 'Blog', href: '#blog' },
     { id: 'contact', label: 'Contact', href: '#contact' },
   ];
 
